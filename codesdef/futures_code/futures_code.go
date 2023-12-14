@@ -1,19 +1,5 @@
 package futures_code
 
-import "github.com/Hongssd/mythsapi/codesdef"
-
-type FuturesCode codesdef.Code
-
-type FuturesCodes []FuturesCode
-
-func (fcs *FuturesCodes) ConvertToCodes() codesdef.Codes {
-	var codes codesdef.Codes
-	for _, fc := range *fcs {
-		codes = append(codes, codesdef.Code(fc))
-	}
-	return codes
-}
-
 const (
 	GC0W_CMX = "@GC0W.CMX" //纽约金主连
 	SI0W_CMX = "@SI0W.CMX" //纽约银主连

@@ -200,8 +200,9 @@ func (client *RestClient) QueryRealTimeQuotationToKlinesAndDepths(codes ...codes
 
 			bids := []PriceLevel{}
 			asks := []PriceLevel{}
-
-			bids = append(bids, PriceLevel{Price: bid1s[i].(float64), Quantity: bid1Sizes[i].(float64)})
+			if len(bid1s) > i && bid1s[i] != nil {
+				bids = append(bids, PriceLevel{Price: bid1s[i].(float64), Quantity: bid1Sizes[i].(float64)})
+			}
 			if len(bid2s) > i && bid2s[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid2s[i].(float64), Quantity: bid2Sizes[i].(float64)})
 			}
