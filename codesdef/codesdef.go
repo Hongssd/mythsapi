@@ -9,6 +9,10 @@ type Code string
 
 type Codes []Code
 
+func (cs Code) String() string {
+	return string(cs)
+}
+
 func (cs *Codes) AddCodes(newCodes ...Code) {
 	for _, code := range newCodes {
 		*cs = append(*cs, code)
@@ -29,7 +33,6 @@ func (c *Codes) UnmarshalJSON(data []byte) error {
 	*c = result
 	return nil
 }
-
 
 func (c *Codes) MarshalJSON() ([]byte, error) {
 	if c == nil || len(*c) == 0 {

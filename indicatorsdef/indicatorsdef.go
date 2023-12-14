@@ -9,6 +9,10 @@ type Indicator string
 
 type Indicators []Indicator
 
+func (is Indicator) String() string {
+	return string(is)
+}
+
 func (is *Indicators) AddIndicators(newIndicators ...Indicator) {
 	for _, indicator := range newIndicators {
 		*is = append(*is, indicator)
