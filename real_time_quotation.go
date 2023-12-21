@@ -184,13 +184,32 @@ func (client *RestClient) QueryRealTimeQuotationToKlinesAndDepths(codes ...codes
 			kline := Kline{
 				Symbol:    symbol,
 				Timestamp: timestamp,
-				PreClose:  preCloses[i].(float64),
-				Open:      opens[i].(float64),
-				High:      highs[i].(float64),
-				Low:       lows[i].(float64),
-				Close:     closes[i].(float64),
-				Volume:    volumes[i].(float64),
+				// PreClose:  preCloses[i].(float64),
+				// Open:      opens[i].(float64),
+				// High:      highs[i].(float64),
+				// Low:       lows[i].(float64),
+				// Close:     closes[i].(float64),
+				// Volume:    volumes[i].(float64),
 			}
+			if v, ok := preCloses[i].(float64); ok {
+				kline.PreClose = v
+			}
+			if v, ok := opens[i].(float64); ok {
+				kline.Open = v
+			}
+			if v, ok := highs[i].(float64); ok {
+				kline.High = v
+			}
+			if v, ok := lows[i].(float64); ok {
+				kline.Low = v
+			}
+			if v, ok := closes[i].(float64); ok {
+				kline.Close = v
+			}
+			if v, ok := volumes[i].(float64); ok {
+				kline.Volume = v
+			}
+
 			klines = append(klines, kline)
 
 			depth := Depth{
