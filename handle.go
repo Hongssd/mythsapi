@@ -15,12 +15,12 @@ type ThsRestRes[T any] struct {
 }
 
 type DataRes[T any] struct {
-	Data        T           `json:"data"`        //请求结果
-	Tables      T           `json:"tables"`      //请求结果
-	DataType    []DataType  `json:"dataType"`    //请求数据类型
-	InputParams InputParams `json:"inputParams"` //请求参数
-	DataVol     int64       `json:"dataVol"`     //请求数据量
-	Perf        int64       `json:"perf"`        //请求耗时
+	Data        T                      `json:"data"`        //请求结果
+	Tables      T                      `json:"tables"`      //请求结果
+	DataType    []DataType             `json:"dataType"`    //请求数据类型
+	InputParams map[string]interface{} `json:"inputParams"` //请求参数
+	DataVol     int64                  `json:"dataVol"`     //请求数据量
+	Perf        int64                  `json:"perf"`        //请求耗时
 }
 
 type DataType struct {
@@ -28,9 +28,9 @@ type DataType struct {
 	Type   string `json:"type"`   //请求数据类型
 }
 
-type InputParams struct {
-	Indexs string `json:"indexs"` //请求数据类型
-}
+// type InputParams struct {
+// 	Indexs string `json:"indexs"` //请求数据类型
+// }
 
 func handlerCommonRest[T any](data []byte) (*ThsRestRes[T], error) {
 	res := &ThsRestRes[T]{}
