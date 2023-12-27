@@ -159,7 +159,7 @@ func (client *Client) RefreshAccessToken() error {
 		return err
 	}
 	if res.Data.AccessToken == "" {
-		return fmt.Errorf("refresh access token error")
+		return fmt.Errorf("refresh access token error: %+v", res)
 	}
 	log.Debug(res)
 	client.AccessToken = res.Data.AccessToken

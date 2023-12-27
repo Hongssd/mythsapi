@@ -219,65 +219,65 @@ func (client *RestClient) QueryRealTimeQuotationToKlinesAndDepths(codes ...codes
 
 			bids := []PriceLevel{}
 			asks := []PriceLevel{}
-			if len(bid1s) > i && bid1s[i] != nil {
+			if len(bid1s) > i && bid1s[i] != nil && len(bid1Sizes) > i && bid1Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid1s[i].(float64), Quantity: bid1Sizes[i].(float64)})
 			}
-			if len(bid2s) > i && bid2s[i] != nil {
+			if len(bid2s) > i && bid2s[i] != nil && len(bid2Sizes) > i && bid2Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid2s[i].(float64), Quantity: bid2Sizes[i].(float64)})
 			}
-			if len(bid3s) > i && bid3s[i] != nil {
+			if len(bid3s) > i && bid3s[i] != nil && len(bid3Sizes) > i && bid3Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid3s[i].(float64), Quantity: bid3Sizes[i].(float64)})
 			}
-			if len(bid4s) > i && bid4s[i] != nil {
+			if len(bid4s) > i && bid4s[i] != nil && len(bid4Sizes) > i && bid4Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid4s[i].(float64), Quantity: bid4Sizes[i].(float64)})
 			}
-			if len(bid5s) > i && bid5s[i] != nil {
+			if len(bid5s) > i && bid5s[i] != nil && len(bid5Sizes) > i && bid5Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid5s[i].(float64), Quantity: bid5Sizes[i].(float64)})
 			}
-			if len(bid6s) > i && bid6s[i] != nil {
+			if len(bid6s) > i && bid6s[i] != nil && len(bid6Sizes) > i && bid6Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid6s[i].(float64), Quantity: bid6Sizes[i].(float64)})
 			}
-			if len(bid7s) > i && bid7s[i] != nil {
+			if len(bid7s) > i && bid7s[i] != nil && len(bid7Sizes) > i && bid7Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid7s[i].(float64), Quantity: bid7Sizes[i].(float64)})
 			}
-			if len(bid8s) > i && bid8s[i] != nil {
+			if len(bid8s) > i && bid8s[i] != nil && len(bid8Sizes) > i && bid8Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid8s[i].(float64), Quantity: bid8Sizes[i].(float64)})
 			}
-			if len(bid9s) > i && bid9s[i] != nil {
+			if len(bid9s) > i && bid9s[i] != nil && len(bid9Sizes) > i && bid9Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid9s[i].(float64), Quantity: bid9Sizes[i].(float64)})
 			}
-			if len(bid10s) > i && bid10s[i] != nil {
+			if len(bid10s) > i && bid10s[i] != nil && len(bid10Sizes) > i && bid10Sizes[i] != nil {
 				bids = append(bids, PriceLevel{Price: bid10s[i].(float64), Quantity: bid10Sizes[i].(float64)})
 			}
 
-			if len(ask1s) > i && ask1s[i] != nil {
+			if len(ask1s) > i && ask1s[i] != nil && len(ask1Sizes) > i && ask1Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask1s[i].(float64), Quantity: ask1Sizes[i].(float64)})
 			}
-			if len(ask2s) > i && ask2s[i] != nil {
+			if len(ask2s) > i && ask2s[i] != nil && len(ask2Sizes) > i && ask2Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask2s[i].(float64), Quantity: ask2Sizes[i].(float64)})
 			}
-			if len(ask3s) > i && ask3s[i] != nil {
+			if len(ask3s) > i && ask3s[i] != nil && len(ask3Sizes) > i && ask3Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask3s[i].(float64), Quantity: ask3Sizes[i].(float64)})
 			}
-			if len(ask4s) > i && ask4s[i] != nil {
+			if len(ask4s) > i && ask4s[i] != nil && len(ask4Sizes) > i && ask4Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask4s[i].(float64), Quantity: ask4Sizes[i].(float64)})
 			}
-			if len(ask5s) > i && ask5s[i] != nil {
+			if len(ask5s) > i && ask5s[i] != nil && len(ask5Sizes) > i && ask5Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask5s[i].(float64), Quantity: ask5Sizes[i].(float64)})
 			}
-			if len(ask6s) > i && ask6s[i] != nil {
+			if len(ask6s) > i && ask6s[i] != nil && len(ask6Sizes) > i && ask6Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask6s[i].(float64), Quantity: ask6Sizes[i].(float64)})
 			}
-			if len(ask7s) > i && ask7s[i] != nil {
+			if len(ask7s) > i && ask7s[i] != nil && len(ask7Sizes) > i && ask7Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask7s[i].(float64), Quantity: ask7Sizes[i].(float64)})
 			}
-			if len(ask8s) > i && ask8s[i] != nil {
+			if len(ask8s) > i && ask8s[i] != nil && len(ask8Sizes) > i && ask8Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask8s[i].(float64), Quantity: ask8Sizes[i].(float64)})
 			}
-			if len(ask9s) > i && ask9s[i] != nil {
+			if len(ask9s) > i && ask9s[i] != nil && len(ask9Sizes) > i && ask9Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask9s[i].(float64), Quantity: ask9Sizes[i].(float64)})
 			}
-			if len(ask10s) > i && ask10s[i] != nil {
+			if len(ask10s) > i && ask10s[i] != nil && len(ask10Sizes) > i && ask10Sizes[i] != nil {
 				asks = append(asks, PriceLevel{Price: ask10s[i].(float64), Quantity: ask10Sizes[i].(float64)})
 			}
 
